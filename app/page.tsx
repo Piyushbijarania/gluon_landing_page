@@ -1,5 +1,6 @@
 import Navbar from './components/Navbar'
 import ScrollExpandMedia from './components/ScrollExpandMedia'
+import { HoverBorderGradient } from './ui/hover-border-gradient'
 
 export default function Home() {
   return (
@@ -8,138 +9,144 @@ export default function Home() {
         <Navbar />
 
         {/* Hero Section */}
-      <section className="relative overflow-hidden px-6 pt-32 pb-24 sm:px-8 lg:px-16">
-        {/* Subtle background glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-3xl"></div>
-        
-        <div className="relative mx-auto max-w-4xl text-center">
-          <h1 className="text-5xl font-bold text-amber-100 sm:text-6xl lg:text-7xl mb-6 tracking-tight">
+      <section className="relative overflow-hidden px-6 pt-32 pb-48 sm:px-8 lg:px-16 min-h-screen flex items-center bg-[#0F1015]">
+        <div className="relative mx-auto max-w-4xl text-center w-full z-10">
+          <h1 className="text-8xl font-bold text-amber-100 sm:text-6xl lg:text-7xl mt-29 tracking-tight">
             Gluon Protocol
           </h1>
           
-          <p className="text-xl text-gray-400 mb-4 max-w-2xl mx-auto font-light">
-            Next-generation decentralized stablecoin creation across multiple blockchains
-          </p>
-          
-          <p className="text-sm text-gray-500 mb-12 max-w-xl mx-auto">
-            Stability through physics-inspired split & merge mechanics. Trustless, over-collateralized, multi-chain.
-          </p>
-          
           {/* Choose Your Ecosystem */}
-          <div className="mt-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-amber-100 mb-3">
+          <div className="mt-18">
+            <h2 className="text-2xl sm:text-3xl font-bold text-amber-100 mb-4">
               Choose Your Ecosystem
             </h2>
-            <p className="text-gray-400 mb-8">
+            <p className="text-gray-400 mb-12">
               Gluon is available on multiple blockchain networks
             </p>
             
-            <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {/* EVM Card */}
-            <a 
-              href="https://evm.gluon.stability.nexus/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white/[0.02] p-8 rounded-2xl border border-white/[0.05] hover:border-amber-500/30 hover:bg-white/[0.04] transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10 flex flex-col"
-            >
-              <h3 className="text-2xl font-bold text-amber-100 mb-3 group-hover:text-amber-400 transition-colors">EVM Chains</h3>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-1">
-                Ethereum, Polygon, Arbitrum, and other EVM-compatible networks
-              </p>
-              <div className="flex items-center text-sm text-amber-400 font-medium group-hover:translate-x-1 transition-transform">
-                Launch on EVM
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </a>
-            
-            {/* Ergo Card */}
-            <a 
-              href="https://gluon.gold/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white/[0.02] p-8 rounded-2xl border border-white/[0.05] hover:border-amber-500/30 hover:bg-white/[0.04] transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10 flex flex-col"
-            >
-              <h3 className="text-2xl font-bold text-amber-100 mb-3 group-hover:text-amber-400 transition-colors">Ergo</h3>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-1">
-                Extended UTXO model with advanced smart contract capabilities
-              </p>
-              <div className="flex items-center text-sm text-amber-400 font-medium group-hover:translate-x-1 transition-transform">
-                Launch on Ergo
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </a>
-            
-            {/* Solana Card */}
-            <a 
-              href="https://solana.gluon.stability.nexus/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group bg-white/[0.02] p-8 rounded-2xl border border-white/[0.05] hover:border-amber-500/30 hover:bg-white/[0.04] transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-amber-500/10 flex flex-col"
-            >
-              <h3 className="text-2xl font-bold text-amber-100 mb-3 group-hover:text-amber-400 transition-colors">Solana</h3>
-              <p className="text-gray-400 text-sm mb-6 leading-relaxed flex-1">
-                High-speed, low-cost blockchain for efficient stablecoin operations
-              </p>
-              <div className="flex items-center text-sm text-amber-400 font-medium group-hover:translate-x-1 transition-transform">
-                Launch on Solana
-                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </a>
+            <div className="flex flex-wrap justify-center gap-6">
+              <a 
+                href="https://evm.gluon.stability.nexus/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 text-lg font-semibold text-amber-100 bg-white/[0.02] border border-white/10 rounded-full hover:border-amber-500/50 hover:bg-white/[0.05] hover:text-amber-400 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
+              >
+                EVM
+              </a>
+              
+              <a 
+                href="https://gluon.gold/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 text-lg font-semibold text-amber-100 bg-white/[0.02] border border-white/10 rounded-full hover:border-amber-500/50 hover:bg-white/[0.05] hover:text-amber-400 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
+              >
+                Ergo
+              </a>
+              
+              <a 
+                href="https://solana.gluon.stability.nexus/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3 text-lg font-semibold text-amber-100 bg-white/[0.02] border border-white/10 rounded-full hover:border-amber-500/50 hover:bg-white/[0.05] hover:text-amber-400 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
+              >
+                Solana
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       {/* How It Works Section */}
-      <section id="how-it-works" className="px-6 py-20 sm:px-8 lg:px-16 border-t border-white/5">
+      <section id="how-it-works" className="px-6 py-24 sm:px-8 lg:px-16 border-t border-white/5">
         <div className="mx-auto max-w-4xl">
           <h2 className="text-3xl sm:text-4xl font-bold text-amber-100 mb-8">
             How Gluon Works
           </h2>
           
-          <div className="space-y-6 text-gray-400 leading-relaxed text-sm">
+          <div className="space-y-6 text-gray-400 leading-relaxed text-sm mb-12">
             <p>
-              Gluon is a decentralized stablecoin protocol that enables users to mint stable assets by locking crypto as collateral. 
-              When minting, users deposit assets of a given cryptocurrency in a vault and receive a proportional amount of corresponding stablecoins.
+              The essence of Gluon W is that, analogously to how an atom&apos;s nucleus is composed of protons and neutrons (known collectively as nucleons), a base token is composed of two sub-assets: <span className="text-amber-300 font-medium">neutrons </span> or stable tokeons, whose price is kept stable relative to a target price; and <span className="text-amber-300 font-medium">protons </span> or volatile tokeons, whose price is more volatile than the base token.
             </p>
-            
             <p>
-              The protocol maintains stability through over-collateralization requirements and physics-inspired split & merge mechanics. 
-              If collateral value drops, automated liquidation mechanisms protect the system and ensure stablecoins remain backed.
+              The protocol defines the rules of an autonomous reactor capable of four reactions:
             </p>
           </div>
-          
-          {/* Feature Grid */}
-          <div className="grid sm:grid-cols-2 gap-6 mt-12">
-            <div className="bg-white/[0.02] p-6 rounded-xl border border-white/5">
-              <div className="text-cyan-400 mb-3">⚡</div>
-              <h4 className="text-slate-200 font-semibold mb-2">Multi-Chain</h4>
-              <p className="text-gray-400 text-sm">Deploy on Ergo, EVM, and Solana ecosystems</p>
+
+          {/* Four Reactions */}
+          <div className="space-y-8">
+            {/* Fission */}
+            <div className="bg-white/[0.02] p-8 rounded-xl border border-white/5 hover:border-amber-500/20 transition-colors">
+              <div className="flex items-start gap-4">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-amber-100 mb-3">1. Fission</h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    The user sends base tokens to the reactor and receives neutrons and protons.
+                  </p>
+                  <div className="flex items-center gap-3 text-xs">
+                    <span className="px-3 py-1 bg-amber-500/10 text-amber-300 rounded-full">Input: Base Token</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="px-3 py-1 bg-green-500/10 text-green-300 rounded-full">Output: Neutrons + Protons</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="bg-white/[0.02] p-6 rounded-xl border border-white/5">
-              <div className="text-green-400 mb-3">🔒</div>
-              <h4 className="text-slate-200 font-semibold mb-2">Over-Collateralized</h4>
-              <p className="text-gray-400 text-sm">Every stablecoin backed by excess crypto value</p>
+
+            {/* Fusion */}
+            <div className="bg-white/[0.02] p-8 rounded-xl border border-white/5 hover:border-amber-500/20 transition-colors">
+              <div className="flex items-start gap-4">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-amber-100 mb-3">2. Fusion</h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    The user sends neutrons and protons to the reactor and receives base tokens.
+                  </p>
+                  <div className="flex items-center gap-3 text-xs">
+                    <span className="px-3 py-1 bg-green-500/10 text-green-300 rounded-full">Input: Neutrons + Protons</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="px-3 py-1 bg-amber-500/10 text-amber-300 rounded-full">Output: Base Token</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="bg-white/[0.02] p-6 rounded-xl border border-white/5">
-              <div className="text-purple-400 mb-3">🔄</div>
-              <h4 className="text-slate-200 font-semibold mb-2">Split & Merge</h4>
-              <p className="text-gray-400 text-sm">Physics-inspired mechanics for stability</p>
+
+            {/* Beta Decay β+ */}
+            <div className="bg-white/[0.02] p-8 rounded-xl border border-white/5 hover:border-amber-500/20 transition-colors">
+              <div className="flex items-start gap-4">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-amber-100 mb-3">3. Beta decay β+</h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    The user sends protons to the reactor and receives neutrons.
+                  </p>
+                  <div className="flex items-center gap-3 text-xs">
+                    <span className="px-3 py-1 bg-red-500/10 text-red-300 rounded-full">Input: Protons</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="px-3 py-1 bg-green-500/10 text-green-300 rounded-full">Output: Neutrons</span>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="bg-white/[0.02] p-6 rounded-xl border border-white/5">
-              <div className="text-orange-400 mb-3">🛡️</div>
-              <h4 className="text-slate-200 font-semibold mb-2">Trustless</h4>
-              <p className="text-gray-400 text-sm">No central authority, fully on-chain</p>
+
+            {/* Beta Decay β- */}
+            <div className="bg-white/[0.02] p-8 rounded-xl border border-white/5 hover:border-amber-500/20 transition-colors">
+              <div className="flex items-start gap-4">
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-amber-100 mb-3">4. Beta decay β−</h3>
+                  <p className="text-gray-400 text-sm mb-4">
+                    The user sends neutrons to the reactor and receives protons.
+                  </p>
+                  <div className="flex items-center gap-3 text-xs">
+                    <span className="px-3 py-1 bg-green-500/10 text-green-300 rounded-full">Input: Neutrons</span>
+                    <span className="text-gray-500">→</span>
+                    <span className="px-3 py-1 bg-red-500/10 text-red-300 rounded-full">Output: Protons</span>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <div className="mt-12 p-6 bg-amber-500/5 border border-amber-500/20 rounded-xl">
+            <p className="text-sm text-gray-400 leading-relaxed">
+              <span className="text-amber-300 font-semibold">Dynamic Fees:</span> Beta decay reactions have variable fees based on recent transaction volume, protecting the protocol from oracle manipulation while keeping costs low during normal usage.
+            </p>
           </div>
         </div>
       </section>

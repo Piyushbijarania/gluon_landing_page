@@ -89,12 +89,12 @@ export default function Navbar() {
           </div>
 
           {/* Right side buttons */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <a 
               href="https://evm.gluon.stability.nexus/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium text-amber-100 bg-white/5 border border-white/10 rounded-lg hover:border-amber-400/30 hover:bg-amber-400/5 hover:text-amber-400 transition-all duration-300"
+              className="px-5 py-1.5 text-sm font-semibold text-amber-100 bg-white/[0.02] border border-white/10 rounded-full hover:border-amber-500/50 hover:bg-white/[0.05] hover:text-amber-400 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
             >
               EVM
             </a>
@@ -102,7 +102,7 @@ export default function Navbar() {
               href="https://gluon.gold/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium text-amber-100 bg-white/5 border border-white/10 rounded-lg hover:border-amber-400/30 hover:bg-amber-400/5 hover:text-amber-400 transition-all duration-300"
+              className="px-5 py-1.5 text-sm font-semibold text-amber-100 bg-white/[0.02] border border-white/10 rounded-full hover:border-amber-500/50 hover:bg-white/[0.05] hover:text-amber-400 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
             >
               Ergo
             </a>
@@ -110,7 +110,7 @@ export default function Navbar() {
               href="https://solana.gluon.stability.nexus/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="px-4 py-2 text-sm font-medium text-amber-100 bg-white/5 border border-white/10 rounded-lg hover:border-amber-400/30 hover:bg-amber-400/5 hover:text-amber-400 transition-all duration-300"
+              className="px-5 py-1.5 text-sm font-semibold text-amber-100 bg-white/[0.02] border border-white/10 rounded-full hover:border-amber-500/50 hover:bg-white/[0.05] hover:text-amber-400 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/20 transition-all duration-300"
             >
               Solana
             </a>
