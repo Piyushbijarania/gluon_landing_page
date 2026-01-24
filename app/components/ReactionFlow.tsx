@@ -46,8 +46,8 @@ function MiniFlow({
   inputTokens,
   outputTokens,
 }: {
-  inputTokens: Array<'base' | 'neutron' | 'proton'>
-  outputTokens: Array<'base' | 'neutron' | 'proton'>
+  inputTokens: readonly ('base' | 'neutron' | 'proton')[]
+  outputTokens: readonly ('base' | 'neutron' | 'proton')[]
 }) {
   const isSplit = inputTokens.length === 1 && outputTokens.length === 2
   const isMerge = inputTokens.length === 2 && outputTokens.length === 1

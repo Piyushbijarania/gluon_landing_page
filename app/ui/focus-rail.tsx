@@ -16,8 +16,8 @@ export type FocusRailItem = {
   imageSrc?: string;
   href?: string;
   meta?: string;
-  inputTokens?: Array<'base' | 'neutron' | 'proton'>;
-  outputTokens?: Array<'base' | 'neutron' | 'proton'>;
+  inputTokens?: readonly ('base' | 'neutron' | 'proton')[];
+  outputTokens?: readonly ('base' | 'neutron' | 'proton')[];
 };
 
 interface FocusRailProps {
@@ -88,8 +88,8 @@ function ReactionVisualization({
   inputTokens,
   outputTokens,
 }: {
-  inputTokens: Array<'base' | 'neutron' | 'proton'>;
-  outputTokens: Array<'base' | 'neutron' | 'proton'>;
+  inputTokens: readonly ('base' | 'neutron' | 'proton')[];
+  outputTokens: readonly ('base' | 'neutron' | 'proton')[];
 }) {
   const isSplit = inputTokens.length === 1 && outputTokens.length === 2;
   const isMerge = inputTokens.length === 2 && outputTokens.length === 1;
